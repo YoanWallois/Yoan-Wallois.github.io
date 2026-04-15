@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yoan Wallois — Assistant Professor in Economics at Université Catholique de Lille. Research in environmental policy, climate risks, and text mining.">
     <title>Yoan Wallois - Academic Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,6 +13,9 @@
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo">Yoan <span>Wallois</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -24,62 +28,119 @@
     </header>
 
     <div class="container">
+
         <!-- Main Content -->
         <main class="content">
+
             <section class="card">
                 <h2>Introduction</h2>
-                <p>I am an Assistant Professor in Economics at the FGES, Université Catholique de Lille, and a member of the Laboratoire Interdisciplinaire des Transitions de Lille (LITL). My research operates at the intersection of environmental economics, political economy, and finance, focusing broadly on the evaluation of public policies, the macroeconomic impacts of climate risks, and the analysis of international financial markets.</p>  
-                <p>My methodological approach leverages rigorous econometric modeling with advanced text mining and machine learning techniques. Proficient in Python, R, and Stata, I specialize in harnessing novel data sources, ranging from large unstructured textual corpora to geospatial meteorological datasets to explore climate-related economic risks (phisical and transition risks) and policies impact economic development and sustainability.</p>
+                <p>I am an <strong>Assistant Professor in Economics</strong> at the <strong>FGES — Université Catholique de Lille</strong> and a researcher at the <strong>Laboratoire Interdisciplinaire des Transitions de Lille (LITL)</strong>. My research operates at the intersection of environmental economics, political economy, and finance, focusing on the evaluation of environmental policies, the macroeconomic impacts of climate risks, and the analysis of international financial markets.</p>
+                <p>My methodological approach combines rigorous econometric modelling with advanced text mining and machine learning techniques. Proficient in Python, R, and Stata, I specialize in harnessing novel data sources — from large unstructured textual corpora to geospatial meteorological datasets — to study how climate-related risks (physical and transition) and public policies shape economic development and sustainability.</p>
             </section>
 
             <section class="card">
                 <h2>Research Interests</h2>
                 <div class="tag-container">
-                    <span class="tag">Environmental policies</span>
-                    <span class="tag">Climate phisical and transition risks</span>
+                    <span class="tag primary">Environmental policies</span>
+                    <span class="tag primary">Climate physical &amp; transition risks</span>
+                    <span class="tag primary">Green finance</span>
                     <span class="tag">Political Economy</span>
                     <span class="tag">Text Mining</span>
                     <span class="tag">Machine Learning</span>
-                    <span class="tag">Geen finance</span>
-                    <span class="tag">Spacial economics</span>
+                    <span class="tag">Spatial economics</span>
                     <span class="tag">Geoeconomics of natural resources</span>
                 </div>
             </section>
 
             <section class="card">
-                <h2>News & Highlights</h2>
-                <ul>
-                    <li><strong>2026:</strong> Joined the Université Catholique de Lille as an Assistant Professor in Economics.</li>
-                    <li><strong>2026:</strong> Qualification for the position of Lecturer in Economics (CNU)</li>
-                    <li><strong>2024:</strong> PhD Defense: "Text mining et économie politique: nouvelles applications à la finance et à l'environnement".</li>
-                    <li><strong>2024:</strong> Publication in <em>Review of World Economics</em>: "Do IMF Reports Affect Market Expectations? A Sentiment Analysis Approach".</li>
+                <h2>News &amp; Highlights</h2>
+                <ul class="news-list">
+                    <li>
+                        <span class="news-year">2026</span>
+                        <span>Joined the <strong>Université Catholique de Lille</strong> as an Assistant Professor in Economics.</span>
+                    </li>
+                    <li>
+                        <span class="news-year">2026</span>
+                        <span>Qualification for the position of Maître de Conférences in Economics (CNU Section 5).</span>
+                    </li>
+                    <li>
+                        <span class="news-year">2024</span>
+                        <span>PhD Defence: <em>"Text mining et économie politique : nouvelles applications à la finance et à l'environnement"</em>.</span>
+                    </li>
+                    <li>
+                        <span class="news-year">2024</span>
+                        <span>Publication in <em>Review of World Economics</em> (HCERES A): <em>"Do IMF Reports Affect Market Expectations? A Sentiment Analysis Approach"</em>.</span>
+                    </li>
                 </ul>
             </section>
+
         </main>
 
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="card" style="text-align: center;">
-                <!-- Replace src with your actual photo path -->
-                <img src="CVpic.jpg" alt="Yoan Wallois" class="profile-img">
-                <h3>Yoan Wallois</h3>
-                <p style="font-size: 0.9rem; color: #555;">PhD in Economics<br>Data Scientist</p>
-                
-                <div class="contact-info" style="margin-top: 1.5rem; text-align: left;">
+
+            <div class="card">
+                <!-- Green banner -->
+                <div class="profile-banner"></div>
+
+                <!-- Replace CVpic.jpg with your actual photo; if no photo, remove the <img> and use the initials div below -->
+                <img src="CVpic.jpg" alt="Yoan Wallois" class="profile-img"
+                     onerror="this.style.display='none'; document.getElementById('profile-initials').style.display='flex';">
+                <div class="profile-initials" id="profile-initials" style="display:none;">YW</div>
+
+                <h3 style="font-family: var(--serif); font-size: 1rem; color: var(--ink); margin-bottom: 2px;">Yoan Wallois</h3>
+                <p style="font-size: 0.8rem; color: var(--ink-3); line-height: 1.5;">PhD in Economics · Data Scientist</p>
+
+                <!-- Social / CV links -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/yoanwallois" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/yoanwallois" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://scholar.google.com" target="_blank" rel="noopener">
+                        <i class="fas fa-graduation-cap"></i> Scholar
+                    </a>
+                    <a href="CV_YW2025_French.pdf" class="primary" download>
+                        <i class="fas fa-file-alt"></i> CV
+                    </a>
+                </div>
+
+                <!-- Contact info -->
+                <div class="contact-info">
                     <ul>
-                        <li><i class="fas fa-briefcase"></i> Assistant Professor of Economics</li>
-                        <li><i class="fas fa-building"></i> FGES - Catholic University of Lille</li>
-                        <li><i class="fas fa-magazine"></i> LITL - Laboratoire Interdisciplinaire des Transitions de Lille</li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:yoan.wallois@univ-catholille.fr" style="color: var(--secondary-color); text-decoration: none;">yoan.wallois@univ-catholille.fr</a></li>
+                        <li><i class="fas fa-user-tie"></i> Assistant Professor of Economics</li>
+                        <li><i class="fas fa-university"></i> FGES — Université Catholique de Lille</li>
+                        <li><i class="fas fa-flask"></i> LITL — Laboratoire Interdisciplinaire des Transitions de Lille</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:yoan.wallois@univ-catholille.fr">yoan.wallois@univ-catholille.fr</a>
+                        </li>
                     </ul>
                 </div>
-                
-                <div class="tag-container" style="justify-content: center; margin-top: 1.5rem;">
-                    <a href="#" style="color: var(--primary-color); font-size: 1.2rem; margin: 0 0.5rem;"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" style="color: var(--primary-color); font-size: 1.2rem; margin: 0 0.5rem;"><i class="fab fa-github"></i></a>
-                    <a href="#" style="color: var(--primary-color); font-size: 1.2rem; margin: 0 0.5rem;"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+
+            <!-- Stats panel -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Publication</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Working papers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years teaching</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">197</div>
+                    <div class="stat-label">Countries covered</div>
                 </div>
             </div>
+
         </aside>
     </div>
 
