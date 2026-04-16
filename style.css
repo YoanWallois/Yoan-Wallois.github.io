@@ -511,7 +511,39 @@ nav ul li a.active {
     border-color: rgba(45,106,79,0.25);
 }
 
-/* ── Teaching table ────────────────────────────────────────── */
+/* ── Education list ────────────────────────────────────────── */
+.edu-list { display: flex; flex-direction: column; gap: 0; }
+
+.edu-item {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.edu-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.edu-degree {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 2px;
+}
+
+.edu-institution {
+    font-size: 0.78rem;
+    color: var(--ink-2);
+    line-height: 1.4;
+}
+
+.edu-year {
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-family: var(--serif);
+    font-style: italic;
+    margin-top: 2px;
+}
+
+
 .teaching-table {
     width: 100%;
     border-collapse: collapse;
